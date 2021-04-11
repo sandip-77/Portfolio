@@ -4,8 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-<!--  Favicon    -->
-    <link rel="icon" href="https://www.google.com/s2/u/0/favicons?domain=srbooks.in">
     <!-- Google font linking -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -57,12 +55,12 @@
                 <a href="javascript:void(0);" class="close"></a>
                 <nav >
                     <ul>
-                        <li><a class="smooth-scroll" href="#home">Home</a></li>
-                        <li><a class="smooth-scroll" href="#about">About</a></li>
-                        <li><a class="smooth-scroll" href="#pages">Pages</a></li>
-                        <li><a class="smooth-scroll" href="#mh-skills">Skills</a></li>
-                        <li><a class="smooth-scroll" href="#gallery">Gallery</a></li>
-                        <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+                        <li><a class="smooth-scroll closed" href="#home">Home</a></li>
+                        <li><a class="smooth-scroll closed" href="#about">About</a></li>
+                        <li><a class="smooth-scroll closed" href="#pages">Pages</a></li>
+                        <li><a class="smooth-scroll closed" href="#mh-skills">Skills</a></li>
+                        <li><a class="smooth-scroll closed" href="#gallery">Gallery</a></li>
+                        <li><a class="smooth-scroll closed" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <footer>
@@ -815,6 +813,9 @@
         $(document).ready(function(){
     $('.sidemenu-toggler').click(function(){
         $(".sidemenu").addClass("active");
+    });
+    $(".closed").click(function(){
+        $(".sidemenu").removeClass("active");
     });
     $(".close").click(function(){
         $(".sidemenu").removeClass("active");
